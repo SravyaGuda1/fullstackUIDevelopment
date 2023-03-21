@@ -1,0 +1,22 @@
+body {
+  background-color: #ffe4e1;
+}
+
+hr{
+  background-color: none;
+  width: 5%;
+  border-style: none;
+  border-top-style: dotted;
+  border-color: grey;
+  border-width:1px;
+}
+
+h1{
+  color: #65350f;
+  font-family: "Lucida Handwriting", Cursive;
+}
+
+h3{
+  color: #ff6289;
+  font-family: "Garamond", Serif;
+}

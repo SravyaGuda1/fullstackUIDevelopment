@@ -1,0 +1,87 @@
+ body{
+  margin: 0;
+}
+
+h1{
+  width: 10%;
+  margin: 0 auto;
+  font-size: 5rem;
+  color: #66BFBF;
+  line-height: 2;
+}
+
+h2{
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
+}
+
+a, h3{
+  color: #11999E;
+}
+.top-container{
+  background-color: #EAF6F6;
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  font-family: cursive;
+}
+
+.middle-container{
+  text-align: center;
+}
+
+.skill-row{
+  margin: 100px auto 100px auto;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+.bottom-cloud{
+  position: absolute;
+  left: 200px;
+  bottom: 300px;
+}
+
+.top-cloud{
+  position: relative;
+  left: 200px;
+}
+
+.Computer-image{
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.Chillies{
+  width: 25%;
+  float: right;
+  margin-right: 30px;
+}
+
+.Programming-skill-description{
+  clear: left;
+}
+
+.browsing-description{
+  clear: right;
+}
+
+p
+{
+  color: #40514E;
+}
+
+hr{
+  width: 5%;
+
+}
+
+.profile-description{
+  width: 30%;
+}
+.huge{
+  color: goldenrod;
+  font-size: 10rem;
+}
