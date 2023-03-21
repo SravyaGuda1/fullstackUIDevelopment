@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List out all even numbers in an array</title>
+</head>
+<body>
+    <script>
+         var numArray = [];
+         var array_evenNum = [];            
+        var sum=0;
+        var noOfElements = prompt("Enter number of elements in array");
+        noOfElements = parseInt(noOfElements);
+        for(var i=0; i<noOfElements; i++){
+            numArray[i] = prompt("Enter "+i+"th element in array");    
+            if(numArray[i]%2 ==0){
+                array_evenNum.push(numArray[i]);
+            }                   
+        }        
+        console.log(numArray);    
+        console.log(array_evenNum);           
+    </script>
+</body>
+</html>

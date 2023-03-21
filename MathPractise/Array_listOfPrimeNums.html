@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List all prime numbers in array</title>
+</head>
+<body>
+    <script>
+        var arraySize = prompt("Enter array size");
+        arraySize = parseInt(arraySize);
+        var numArray=[], array_prime=[];
+
+        for(var i=0; i<arraySize; i++){
+            numArray[i]= parseInt(prompt("Please enter "+i+" element"));
+            var primeCheck = isPrime(numArray[i]);
+            if(primeCheck == true){
+                array_prime.push(numArray[i]);
+            }
+        }
+        console.log("Prime numbers in array is "+array_prime);
+        function isPrime(num) {
+            var count=0;
+            for(var i=2; i<num-1; i++){
+                if(num%i ==0){
+                    count++;
+                }
+            }
+            if(count ==0)
+                return true;
+            else
+                return false;
+        }
+    </script>
+</body>
+</html>

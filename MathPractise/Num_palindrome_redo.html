@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome redo</title>
+</head>
+<body>
+    <script>
+        
+        var revNum=0;
+        var isPalindrome = (x) =>{
+            var copy = x;
+            while(x>0){
+                var rem = parseInt(x%10);
+                x= parseInt(x/10);
+                revNum = revNum*10+rem;
+            }
+            if(revNum == copy){
+                return true;
+            } else
+                return false;
+        }
+        var Num = isPalindrome(343);
+        console.log(Num);
+    </script>
+</body>
+</html>

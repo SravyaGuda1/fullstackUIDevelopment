@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify if the given string is palindrome or not</title>
+</head>
+<body>
+    <script>
+        var inputString = prompt("Enter string");
+        console.log(checkPalindrome(inputString));
+        function checkPalindrome(inputString) {
+            var special = /[^A-Za-z0-9]/g;
+            var str  = inputString;
+            str = str.toLowerCase().replace(special,"");
+            //inputString.toLowerCase.replace(special, "");
+            console.log(str);
+            var stringLength = str.length;
+        for(var i=0; i<stringLength/2; i++){
+            if(str.charAt(i) !== str.charAt(stringLength-1-i))
+                return false;
+        }
+        return true;
+        }
+     
+
+    </script>
+</body>
+</html>

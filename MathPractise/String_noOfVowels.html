@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find no. of vowels in given string</title>
+</head>
+<body>
+    <script>
+        var stingInitial = prompt("Hello sravya");
+        var vowelCount=0, vowelArray=[];
+        console.log(stingInitial.length);
+        console.log(stingInitial.toLowerCase());
+         var checkIfVowel = function(char){
+            switch(char){
+                case 'a':
+                case 'e':
+                    return true;
+                    break;
+                case 'i':
+                case 'o':
+                    return true;
+                    break;
+                case 'u':
+                    return true;
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+        }
+        for(var i=0; i< stingInitial.length; i++){
+            var isVowel = checkIfVowel(stingInitial.toLowerCase().charAt(i));
+            if(isVowel == true){
+                vowelCount++;
+                vowelArray.push(stingInitial.charAt(i))
+            }
+        }
+        console.log(vowelCount+ "Vowels are "+vowelArray);
+        
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List out all armstrong numbers below 200</title>
+</head>
+<body>
+    <script>
+        var num;
+        var array_Armstrong = [];
+
+        for(var i=0; i<500; i++){
+            var armstrongCheck = isArmstrong(i);
+            if(armstrongCheck == true){
+                array_Armstrong .push(i);
+            }
+        }
+        console.log("Armstrong numbers below 200 are "+array_Armstrong);
+
+        function isArmstrong(num){
+            var numInitial = num;
+            var rem,result=0, powerValue = num.toString().length;
+            while(num>0){
+                rem = parseInt(num%10);
+                num =parseInt(num/10);
+                result += rem**(powerValue);
+                console.log(powerValue);
+            }
+            if(result == numInitial)
+                return true;
+            else
+                return false;
+        }
+    </script>
+</body>
+</html>

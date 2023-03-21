@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd numbers in given range</title>
+</head>
+<body>
+    
+    <script>
+        var startNum = parseInt(prompt("Enter start number"));
+        var endNum = parseInt(prompt("Enter end number"));
+        if(startNum>endNum){
+            for(var i=startNum; i>=endNum; i--){
+            if(i%2!=0){
+                console.log(i);
+            }else{
+                continue;
+            }
+        }
+        } else{
+            for(var i=startNum; i<=endNum; i++){
+            if(i%2!=0){
+                console.log(i);
+            }else{
+                continue;
+            }
+        }
+        }     
+
+        
+    </script>
+</body>
+</html>

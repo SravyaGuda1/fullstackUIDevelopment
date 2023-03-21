@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read values into the array and find sum</title>
+</head>
+<body>
+    <script>
+        var numArray = [];
+        var sum=0;
+        var noOfElements = prompt("Enter number of elements in array");
+        noOfElements = parseInt(noOfElements);
+        for(var i=0; i<noOfElements; i++){
+            numArray[i] = prompt("Enter "+i+"th element in array");
+            sum+=parseInt(numArray[i]);
+        }
+        console.log(numArray);
+        console.log("Sum of numbers in array is "+sum);
+
+    </script>
+</body>
+</html>

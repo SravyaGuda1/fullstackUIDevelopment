@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second largest number in array</title>
+</head>
+<body>
+    <script>
+        var numArray = [];
+        var temp;
+        var arraySize= parseInt(prompt("Enter array size"));
+        for(var i=0; i<arraySize; i++){
+            numArray[i] = parseInt(prompt("Enter "+i+ " element"));
+        }
+        console.log("you have entered values "+numArray);
+
+        for(var i=0; i< arraySize; i++){
+            for(var j=i+1; j<arraySize; j++){
+                if(numArray[i]>numArray[j]){
+                    temp = numArray[i];
+                    numArray[i] = numArray[j];
+                    numArray[j] = temp;
+                }
+            }
+        }
+        console.log("Ascending ordered values are "+numArray);
+        console.log("Smallest number is "+numArray[0]);
+        console.log("Largest value is "+numArray[arraySize-1]);
+        console.log("Second largest value is "+numArray[arraySize-2]);
+        var descArray =[];
+        for(var i=0; i<arraySize; i++){
+            descArray[i] = numArray[arraySize-1-i];
+        }
+        console.log("Values in descending order are "+descArray);
+    </script>
+</body>
+</html>

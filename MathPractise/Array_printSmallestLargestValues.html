@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print smallest and largest values in array</title>
+</head>
+<body>
+    <script>
+        var numArray = [];
+        var smallest = 0, largest = 0;
+        var arraySize = prompt("Enter array size");        
+
+        for(var i=0; i<arraySize; i++){
+            numArray[i] = prompt("Enter "+i+ " element");
+            numArray[i] = parseInt(numArray[i]);  
+            if(i==0){
+                smallest = numArray[0];
+                largest = numArray[0];
+            } else{
+                if(smallest > numArray[i])
+                smallest = numArray[i];
+                if(largest < numArray[i])
+                largest = numArray[i]; 
+             } 
+              
+        }
+        console.log("Elements in array are "+numArray);
+        console.log("Smallest is "+smallest);  
+        console.log("Largest number in array is "+largest);                                               
+    </script>
+
+</body>
+</html>

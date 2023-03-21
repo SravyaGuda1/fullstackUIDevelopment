@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+<body>
+    <script>
+        var initialNum = prompt("Enter number");
+        var rem, res = 0;
+        var noOfDigits = initialNum.length;
+        num = parseInt(initialNum);
+
+        for(var i=0; i<noOfDigits; i++){
+            rem = num%10;
+            num = parseInt(num/10);
+            res = res+(rem**noOfDigits);
+        }
+        if(res == parseInt(initialNum)){
+            console.log("Given number is armstrong number");            
+        } else{
+            console.log("Given number is NOT armstrong number"); 
+        }
+        
+    </script>
+</body>
+</html>
