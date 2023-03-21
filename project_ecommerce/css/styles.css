@@ -1,0 +1,154 @@
+.a-links > p{
+    text-align: center;
+    margin: 1rem;
+}
+body, p{
+    margin: 0;
+}
+body{
+    background-color: rgb(240, 247, 227);
+    color: rgb(93, 118, 53);
+}
+.brand-label{
+    font-size: 3rem;
+}
+footer, .header-section, .login-button{
+    background-color: rgb(219, 246, 177) ;
+}
+footer{
+    height: 1.5rem;
+    padding: 1rem;
+}
+.footer-menu{
+    display: inline-block;
+}
+footer > div{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-menu > ul > li{
+    display:inline-flex;
+    margin-right: 1rem; 
+}
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.itemContainer{
+    width: 12rem;
+    margin: 1rem;
+    display: inline-block;
+}
+.itemContainer:hover{
+    text-decoration: aliceblue;
+    box-shadow: gray;
+    cursor: pointer;
+
+    box-shadow: 0.3rem 0.3rem 1.5rem  rgb(166, 186, 133) ;
+}
+.itemImg{
+    height: 15rem;
+    width: 12rem;
+}
+.itemsList{
+    width: 80%;
+}
+.item{
+    display: inline-block;
+}
+
+.itemName{
+    text-align: center;
+    font-size: 1.5rem;
+}
+ul, li{
+    margin: 0px;
+    padding: 0px;
+}
+.login-button{
+    height: 2rem;
+    width:4rem;
+    font-size: 1rem;   
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(162, 204, 93);
+    color: rgb(82, 100, 52);
+    cursor: pointer;
+}
+.logoimg{
+    height: 2.5rem;
+}
+.mainArea{
+    margin: 2rem;
+}
+.navbar {
+    padding: 1rem;
+}
+.nav-a{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: rgb(82, 100, 52);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.nav-a:hover{
+    text-decoration: 3px underline red;
+}
+.search {
+    display: inline-block;
+    margin-top: 0.6rem
+}
+.searchbar {
+    display: inline-block;
+    height: 2rem;
+    width: 25rem;
+    padding-left: 0.5rem;
+    border-radius: 0.8rem;
+    border-color: rgb(162, 204, 93);
+}
+.search-go {
+    display: inline-block;
+    height: 2.3rem;
+    width: 4rem;
+    padding-left: 0.5rem;
+    background-color: rgb(241, 169, 212);
+    color: rgb(82, 100, 52);
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 0.8rem;
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.user-data{
+    width: 20%;
+    margin: 5rem auto;    
+    font-family: sans-serif;
+    border-radius: 1rem;
+    border-color: rgb(93, 118, 53);
+    padding: 1rem;
+}
+.user-data-label{
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    width: 7rem;
+}
+.welcome-msg{
+    width: 30%;
+    margin: auto;
+    padding: 2.5rem;
+    font-size: 2rem;
+    font-family: inherit;
+    color: rgb(93, 118, 53);
+}
+
+
+
+
