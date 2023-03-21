@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Assignments",
+			"path": "../../../UI Dev course/webApplication/public/Assignments"
+		},
+		{
+			"name": "Frontend mentor",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

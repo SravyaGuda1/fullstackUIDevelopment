@@ -1,0 +1,172 @@
+body{
+    font-family: Heebo, sans-serif;
+    margin: 0;
+}
+
+ html{
+    -webkit-font-smoothing: antialiased;
+}
+.copyRts{
+    background-color: white;
+    border-top: 1px solid rgb(219, 229, 230);
+}
+.copyRights{
+    padding: 2rem 0;
+}
+.CopyRightsContent{
+    display: inline;
+}
+.footer-list{
+    float: right;
+    display: inline-flex;
+    font-size: 0.9rem;
+}
+.footer-list > :not(:last-child){
+    margin-right: 2rem;
+}
+.header-wrap{
+    width: calc(100% - 6rem);
+    align-items: center;
+    margin: 0 auto;
+  }
+.headerTop{
+    background-color: #3E54A3;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: Heebo, sans-serif;
+  }
+  .headerTop-text{
+    display: inline;
+  }
+  .headerTop-hyperlink{
+    color: white;
+    text-decoration: underline;
+    font-family: Heebo, sans-serif;
+  }
+
+li{
+    list-style: none;
+}
+
+.footerlinks:hover{
+    text-decoration: underline;
+}
+.footerlinks{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 0.9rem;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+.xxjjy{
+    width: 70%;
+    margin: 0 auto;
+}
+.brand-image{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*display: inline-flex;*/
+  }
+
+  .Top-menu{
+    margin-right: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Top-menu:hover{
+    text-decoration: underline red 2px;
+    bottom: -4px;
+    width: 100%;
+
+  }
+
+  .Top-menu-list{
+    list-style-type: none;
+    display: flex;
+  }
+
+  ul::hover{
+    text-decoration: underline red;
+    cursor: pointer;
+  }
+
+  .nav-options{
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+    font-style: italic;
+    font-family: Barlow, sans-serif;
+    font-weight: 700;
+    display: flex;
+  }
+
+  *, ::before, ::after{
+    box-sizing: inherit;
+  }
+
+  .github-option{
+    color: white;
+    font-style:italic;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .PRO-tag{
+    background-color: rgb(62,84,163);
+    color: white;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    font-size: 9.2px;
+    text-align: center;
+    line-height: 13.px;
+    padding: 2.3px 6.9px;
+  }
+
+  .fa-brands, .fab {
+      font-weight: 400;
+      font-family: "Font Awesome 6 Brands";
+  }
+
+
+  .fa-classic, .fa-light, .fa-regular, .fa-solid, .fa-thin, .fal, .far, .fas, .fat {
+    font-family: "Font Awesome 6 Pro";
+}
+.fa-briefcase:before {
+    content: "\f0b1";
+}
+.iilxff{
+    max-width: 140rem;
+    margin: o auto;
+  }
+  .briefcase{
+    color: azure;
+    height: 25px;
+  }
+  .socialIconsblock{
+    height: 26px;
+    display: flex;
+  }
+  .socialIconsblock > :not(:last-child){
+    margin-right: 25px;
+  }
+  .FooterContent{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    position: absolute;
+  }

@@ -1,0 +1,126 @@
+.header{
+  background-color: #3E54A3;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: Heebo, sans-serif;  
+}
+.briefcase{
+  color: azure;
+  height: fit-content;
+}
+
+.header-hyperlink{
+  color: white;
+  text-decoration: underline;
+  font-family: Heebo, sans-serif;
+}
+
+.header-wrap{
+  width: calc(100% - 6rem);
+  align-items: center;
+  margin: 0 auto;
+}
+
+body{
+  margin: 0;
+}
+
+.brand-image{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+}
+
+.Top-menu{
+  margin-right: 1rem;
+  vertical-align: middle;
+  text-decoration: none;
+  color: inherit;
+}
+
+.Top-menu:hover{
+  text-decoration: underline red 2px;
+  bottom: -4px;
+  width: 100%;
+
+}
+
+.Top-menu-list{
+  list-style-type: none;
+  display: flex;
+}
+
+ul::hover{
+  text-decoration: underline red;
+  cursor: pointer;
+}
+
+.nav-options{
+  font-size: 14px;
+  line-height: 21px;
+  align-items: center;
+  font-style: italic;
+  font-family: Barlow, sans-serif;
+  font-weight: 700;
+  display: flex;
+}
+
+*, ::before, ::after{
+  box-sizing: inherit;
+}
+
+.github-option{
+  color: white;
+  font-style:italic;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+}
+
+.PRO-tag{
+  background-color: rgb(62,84,163);
+  color: white;
+  letter-spacing: 2px;
+  margin-left: 10px;
+  font-size: 9.2px;
+  text-align: center;
+  line-height: 13.px;
+  padding: 2.3px 6.9px;
+}
+
+.fa-brands, .fab {
+    font-weight: 400;
+}
+
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+}
+.footerCopyRightsSection{
+  border-top: 1px solid rgb(219, 229, 230);
+  width: 140rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.footer-list li{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  float: left;
+}
+.footerCopyRightsSection li::hover{
+  text-decoration: underline;
+
+}
+.iilxff{
+  max-width: 140rem;
+  margin: o auto;
+}
