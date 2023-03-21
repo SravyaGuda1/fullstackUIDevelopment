@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic table data</title>
+    <style>
+        form{
+            width: 20%;
+            float: left;
+        }
+        h2{
+            text-align: center;
+            margin: 1rem;
+            padding: 1rem;
+        }
+     
+        label{
+            width: 20rem;
+        }       
+        li{
+            list-style: none;
+            padding: 1rem;
+            margin: 1rem;
+            background-color: rgb(241, 215, 215);
+        }  
+        .studentData{
+            float: left;
+            margin: 2rem;
+            display: none;
+        }
+        .btn{
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+        } 
+        td{
+            border: 1px solid red;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.5rem;            
+        }     
+        ul{
+            padding: 0rem;
+            margin: 0rem;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Account details</h2>
+    <form action="http://abc.com/stud" method="POST">
+        <ul>
+            <li>
+                <label for="AccName" >Account Name:</label>
+                <input type="text" class="accName">
+            </li>
+            <li>
+                <label for="AccAge">Age</label>
+                <input type="text" class="age">
+            </li>
+            <li>
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" class="gender" value="Male">Male
+                <input type="radio" name="gender" class="gender" value="Female">Female
+            </li>
+            <li>
+                <label for="location" class="label">Location</label>
+                <input type="text" class="location">
+            </li>
+            <li>
+                <label for="operation">Operation</label>
+                <select name="operation" id="operation">
+                    <option value="createAcc">Create account</option>
+                    <option value="CheckBal">Check balance</option>
+                    <option value="withdraw">Withdraw money</option>
+                    <option value="checkBookReq">Check book request</option>
+                </select>
+            </li>
+            <li class="buttons">
+                <input type="button" value="Register" class="submit btn">
+                <input type="reset" value="Reset" class="reset btn">
+                <input type="button" value="Save" class="save btn" style="display: none;">
+            </li>
+        </ul>
+    </form>
+
+    <div class="studentData">
+        <table>
+            <thead>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Gender</td>
+                <td>Location</td>
+                <td>Operation</td>
+                <td>Need to change?</td>
+            </thead>
+            <tbody class="tableRecord">
+
+            </tbody>
+            </table>
+
+    </div>
+    <script src="dynamicTable1.js"></script>
+</body>
+</html>

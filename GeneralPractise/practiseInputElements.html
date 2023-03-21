@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PractiseInputElements</title>
+    <style>
+        div{
+            border: 1px solid brown;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        .StudentDetails{
+            list-style: none;
+            margin: 10px;
+        }
+        .eachStudent{
+            margin: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="http://qawest.com/practise" method="post">
+            <caption>Student registration form</caption>
+            <ul class="StudentDetails">
+                <li class="eachStudent">
+                    <label for="UserName">User Name:</label>
+                    <input type="text" name="UserName" maxlength="15" inputmode="numeric">
+                </li>
+                <li class="eachStudent">
+                    <label for="Password">User Password</label>
+                    <input type="password" name="Password" minlength="8" inputmode="numeric">
+                </li>
+                <li class="eachStudent">
+                    <label for="dateOfBirth">Date of birth:</label>
+                    <input type="date" name="dateOfBirth" id="dob">
+                </li>
+                <li class="eachStudent">
+                    <label for="apptDateTime">Appointment date:</label>
+                    <input type="datetime-local" name="apptDateTime">
+                </li>
+                <li class="eachStudent">
+                    <label for=""></label>
+                </li>
+            </ul>
+           
+        </form>
+    </div>          
+    <script>
+        var num1 = 10;
+        var num2 = 50;
+        var multiplicationResult;
+        multiplicationResult = num1 * num2;
+        console.log(multiplicationResult);
+    </script>
+</body>
+</html>

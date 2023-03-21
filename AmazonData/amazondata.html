@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="../../jquery.min.js"></script>
+    <title>Amazon data</title>
+    <style>
+        .btn{
+            padding: 5px;
+            margin: 5px;
+        }
+        h1, h3{
+            border: 1px solid red;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amazon data - Filter with web service</h1>
+    <input type="text" class="searchInput">
+    <input type="button" class="btn" value="Load search results" onclick="loadData()">
+    <div>
+        <h3 class="SearchText">Search results</h3>
+        <div class="searchResults">
+
+        </div>
+    </div>
+    <script>
+        var loadData= ()=>{
+            var searchInput = document.querySelector(".searchInput").value;
+            console.log(searchInput);
+            var dataUrl = "https://completion.amazon.com/api/2017/suggestions?limit=11&prefix="+searchInput+"&suggestion-type=WIDGET&suggestion-type=KEYWORD&page-type=Gateway&alias=aps&site-variant=desktop&version=3&event=onfocuswithsearchterm&wc=&lop=en_US&last-prefix=bag&avg-ks-time=9507&fb=1&session-id=143-4066606-4730626&request-id=JJ0VWHXCRZMZD12A0F4Z&mid=ATVPDKIKX0DER&plain-mid=1&client-info=amazon-search-ui";
+            console.log(dataUrl);
+            $.ajax({
+                url : dataUrl,
+                method: 'GET',
+                dataType: 'JSON',
+                data: {},
+                success : (response)=>{
+                    console.log("Successfully communicated and received data");
+                    if($(".searchResults")!= null){
+                            $(".result").remove();
+                    }                    
+                    var suggestions = response.suggestions;
+                    suggestions.forEach(element => {   
+                        $(".searchResults").append($("<p/>").html(element.value).addClass("result"));
+                    });
+                },
+                error : ()=>{
+                    console.log("Failed to connect to server");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
