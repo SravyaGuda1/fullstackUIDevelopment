@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8_ Input elements</title>
+    <style>
+        .header,
+        .footer,
+        .middleContainer {
+            border: 1px solid;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .header,
+        .footer {
+            text-align: center;
+            font-weight: 700;
+        }
+       
+        legend {
+            border: 1px solid;
+            text-decoration: underline;
+            padding: 5px;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+            margin: 0.5rem;
+        }
+
+        .litem {
+            display: inline-block;
+        }
+
+        .ritem {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+        }
+        fieldset{
+            margin: 5px; 
+        }
+        .fs1 label {
+            width: 100px;
+            display: inline-block;           
+        }
+        .fs2 label {
+            width: 130px;
+            display: inline-block;
+        }
+        .fs3 label {
+            width: 100px;
+            display: inline-block;
+        }
+        .gender {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">Student registration page</header>
+    <div class="middleContainer">
+        <form action="http://localhost:8081/abc" method="POST">
+            <ul>
+                <fieldset class="fs1">
+                    <legend>Account details</legend>
+                    <div>
+                        <li class="litem">
+                            <label for="name">Name :</label>
+                            <input type="text" id="name" name="name" class="leftItem">
+                        </li>
+                        <li class="ritem">
+                            <label for="accountid">Account id :</label>
+                            <input type="text" id="accountid" name="accountid" class="rightItem">
+                        </li>
+                    </div>
+                    <div>
+                        <li class="litem">
+                            <label for="name">Age :</label>
+                            <input type="text" id="age" name="age" class="leftItem">
+                        </li>
+                        <li class="ritem">
+                            <label for="accounttype">Account type:</label>
+                            <input type="text" id="accounttype" name="accounttype" class="rightItem">
+                        </li>
+                    </div>
+                    <li>
+                        <label for="gender">Gender :</label>
+                        <input type="radio" name="gender"> <span class="gender">Male</span>
+                        <input type="radio" name="gender"><span class="gender">Female</span>
+                    </li>
+                    <li>
+                        <label for="email">Email id :</label>
+                        <input type="email" name="email">
+                    </li>
+                </fieldset>
+                <fieldset class="fs2">
+                    <legend>Educational details</legend>
+                    <div>
+                        <li class="litem">
+                            <label for="qualification">Qualification :</label>
+                            <input type="text" id="qualification" name="qualification" class="leftItem">
+                        </li>
+                        <li class="ritem">
+                            <label for="collegeName">CollegeName :</label>
+                            <input type="text" id="collegeName" name="collegeName" class="rightItem">
+                        </li>
+                    </div>
+                    <div>
+                        <li class="litem">
+                            <label for="languaes">Languages known :</label>
+                            <input type="checkbox"  name="Telugu" class="leftItem">Telugu
+                            <input type="checkbox"  name="Telugu" class="leftItem">HIndi
+                            <input type="checkbox"  name="Telugu" class="leftItem">English
+                        </li>
+                        <li class="ritem">
+                            <label for="location">Location :</label>
+                            <input type="text" id="location" name="location" class="rightItem">
+                        </li>
+                    </div>
+                    <li class="litem">
+                        <label for="course">Course opting for :</label>
+                        <input type="text" name="course" id="course">
+                    </li>
+                </fieldset>
+                <fieldset class="fs3">
+                    <legend>Address</legend>
+                    <div>
+                        <li class="litem">
+                            <label for="dNo">D No :</label>
+                            <input type="text" id="dNo" name="dNo" class="leftItem">
+                        </li>
+                        <li class="ritem">
+                            <label for="countryName">Country name :</label>
+                            <input type="text" id="countryName" name="countryName" class="rightItem">
+                        </li>
+                    </div>
+                    <div>
+                        <li class="litem">
+                            <label for="streetName">Street name :</label>
+                            <input type="text" id="streetName" name="streetName" class="leftItem">
+                        </li>
+                        <li class="ritem">
+                            <label for="countryCode">Country code :</label>
+                            <input type="text" id="countryCode" name="countryCode" class="rightItem">
+                        </li>
+                    </div>
+                    <div>
+                        <li class="litem">
+                            <label for="stateName">State name :</label>
+                            <input type="text" id="stateName" name="stateName" class="leftItem">
+                        </li>
+                    </div>                    
+                    <li class="litem">
+                        <label for="stateCode">State code :</label>
+                        <input type="text" id="stateCode" name="stateCode" class="leftItem">
+                    </li>
+                </fieldset>
+                <fieldset class="fs4">
+                    <legend>About yourself</legend>
+                    <textarea name="aboutUrSelf" id="aboutUrSelf" cols="195" rows="10"></textarea>
+                </fieldset>
+            </ul>
+        </form>
+    </div>
+    <footer class="footer">&copy Copy rights 2023</footer>
+</body>
+
+</html>

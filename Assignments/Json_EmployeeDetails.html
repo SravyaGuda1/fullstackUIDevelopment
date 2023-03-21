@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee details using json</title>
+</head>
+<body>
+    <script>
+        var EmployeeSalaryDetails = {
+            employeeName: prompt("Please mention employee name"),
+          //  employeeAge: prompt("Please mention employee aga"),
+            employeeGender: prompt("Enter employee gender"),
+          //  employeeDepartment: prompt("Please mention employee department"),
+            basicSalary: parseInt(prompt("Please enter employee basic salary")),
+            totalSalaryCalc(){
+                var PF= (14 / 100) * this.basicSalary;
+                var HRA= (25 / 100) * this.basicSalary;
+                var totalSalaryValue= this.basicSalary + PF + HRA;
+                console.log("PF is " + this.PF);
+                console.log("HRA is " + this.HRA);
+                console.log("Total salary is " + this.totalSalary);
+                return totalSalaryValue;
+            },                   
+            taxCalculation() {
+                var TAX, TaxPercent;
+                if (this.employeeGender.toLowerCase() == "male") {
+                    if (this.totalSalary > 100000) {
+                        TaxPercent = 15;
+                    } else if (this.totalSalary > 50000) {
+                        TaxPercent = 10;
+                    } else if (this.totalSalary > 25000) {
+                        TaxPercent = 5;
+                    } else {
+                        TaxPercent = 0;
+                    }
+                } else {
+                    if (this.totalSalary > 100000) {
+                        TaxPercent = 10;
+                    } else if (this.totalSalary > 50000) {
+                        TaxPercent = 5;
+                    } else {
+                        TaxPercent = 0;
+                    }
+                }
+                TAX = (TaxPercent / 100) * this.totalSalary;
+                console.log("Tax to be paid is " +TAX);                
+            },
+                     
+        }
+        
+
+        EmployeeSalaryDetails.totalSalary= EmployeeSalaryDetails.totalSalaryCalc();
+        EmployeeSalaryDetails.taxCalculation();
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book details with Json objects</title>
+</head>
+<body>
+    <script>
+        var getBookDetails= {
+            bookName: prompt("Enter book name"),
+            bookPrice: prompt("Enter book price"),
+            author: prompt("Enter author name"),
+            discountPercent: parseInt(prompt("Enter discount percent")),
+            displayBookDetails(){
+                console.log(this.bookName);
+                console.log(this.bookPrice);
+                console.log(this.author);
+                console.log(this.discountPercent);
+            },
+            getDiscountPercent(){
+                var priceAfterDiscount = (this.bookPrice*this.discountPercent)/100;
+                console.log("Price after discount is "+priceAfterDiscount);
+            }  
+        };
+        getBookDetails.displayBookDetails();
+        getBookDetails.getDiscountPercent();             
+        
+    </script>
+</body>
+</html>

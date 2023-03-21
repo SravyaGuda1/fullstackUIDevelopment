@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment on Date formats</title>
+</head>
+<body>
+    <script>
+        var dateDisplay = {
+            dateFormatInput: parseInt(prompt("Choose date format by selecting numbers from 1 to 10")),
+            displayDateFormat() {
+                var date1= new Date();
+                var mon= ['Jan', "Feb", "Mar"];
+                var months = ["january", "February", "March"];
+                var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                
+                switch (this.dateFormatInput) {
+                    case 1:
+                        console.log(date1.getDate() + "/" + months[date1.getMonth()].substr(0,3)+"/"+date1.getFullYear());
+                        //break;
+                    case 2:
+                        console.log(date1.getDate() + "th " + months[date1.getMonth()].substr(0,3)+", "+date1.getFullYear());
+                       // break;
+                    case 3:
+                        console.log(date1.getDate() + "th " + months[date1.getMonth()]+", "+date1.getFullYear());
+                       //break;
+                    case 4:
+                        console.log(day[date1.getDay()].substr(0,3)+", "+date1.getDate() + "th " + months[date1.getMonth()].substr(0,3));
+                       // break;
+                    case 5:
+                        console.log(day[date1.getDay()]+", "+date1.getDate() + "th " + months[date1.getMonth()].substr(0,3));
+                       // break;
+                    case 6:
+                        console.log(date1.getDate() + "-" + months[date1.getMonth()].substr(0,3)+"-"+date1.getFullYear());
+                        //break;
+                    case 7:
+                        console.log(date1.getDate() + "-" + (date1.getMonth()+1).toString().padStart(2,"0") +"-"+date1.getFullYear());
+                        //break;
+                    case 8:
+                        console.log(date1.getDate() + "th " + months[date1.getMonth()].substr(0,3)+", "+date1.getFullYear()+" "+date1.toTimeString().substr(0,8));
+                        // break;
+                    case 9:
+                        console.log(date1.getMinutes()+"min :"+date1.getSeconds()+"sec");
+                        //break;
+                    case 10:
+                        console.log(date1.getHours()+ "hrs, " +date1.getMinutes()+"min "+date1.getSeconds()+"sec");
+                        break;
+                }
+            }
+        };  
+        dateDisplay.displayDateFormat();
+
+        
+        
+    </script>
+</body>
+</html>
+
+
+<!-- output
+1. 14/Feb/2023
+
+2. 14th Feb, 2023
+
+3. 14th February, 2023
+
+4. Tue, 14th Feb 
+
+5. Tuesday, 14th February 2023
+
+6. 14-Feb-2023
+
+7. 14-02-2023
+
+8. 14th Feb, 2023 10:20:30
+
+9: 10 min : 20 sec 
+
+
+10: 2 hrs, 10min 20sec
+
+-->
+

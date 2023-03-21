@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment5 - Redo</title>
+    <style>
+        .headingContainer,
+        .middleContainer,
+        .footerContainer {
+            border: 1px solid;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .headingContainer {
+            text-decoration: underline;
+            border: 1px solid;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .middleContainer {
+            height: 880px;
+
+        }
+
+        .footerContainer {
+            text-align: center;
+        }
+
+        ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        .leftContainer,
+        .rightContainer {
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid;
+            height: 840px;
+        }
+
+        .leftContainer {
+            width: 30%;
+            text-align: center;
+        }
+
+        .rightContainer {
+            width: 65%;
+            overflow: auto;
+        }
+
+        .leftContainer li {
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .student {
+            height: 100px;
+            border: 1px solid;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .studentImage {
+            height: 100px;
+            width: 100px;
+            float: left;
+        }
+
+        .student1 {
+            background-image: url(Students_spritedImage.png);
+            background-position: 243px -15px;
+        }
+
+        .studentDetails {
+            float: left;
+            margin: 10px;
+        }
+
+        .label,
+        .content {
+            float: left;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="headingContainer"> Student details</h3>
+    <div class="middleContainer">
+        <div class="leftContainer">
+            <ol class="studentList">
+                <li>Raj</li>
+                <li>Teena</li>
+                <li>Krish</li>
+                <li>Teju</li>
+                <li>Sunitha</li>
+                <li>Raj2</li>
+                <li>Teena2</li>
+                <li>Krish2</li>
+                <li>Teju2</li>
+                <li> <a href="#student10">Sunitha2</a> </li>
+            </ol>
+        </div>
+        <div class="rightContainer">
+            <ol class="studentdetailsList">
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Raj</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Teena</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Krish</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Teju</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Sunitha</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Raj2</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Teena2</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Krish2</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Teju2</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="student" id="student10">
+                    <div class="studentImage student1"></div>
+                    <div class="studentDetails">
+                        <ol>
+                            <li>
+                                <div class="label">Name:</div>
+                                <div class="content">Sunitha2</div>
+                            </li>
+                            <li>
+                                <div class="label">Age:</div>
+                                <div class="content">20</div>
+                            </li>
+                            <li>
+                                <div class="label">Gender:</div>
+                                <div class="content">Male</div>
+                            </li>
+                            <li>
+                                <div class="label">Location:</div>
+                                <div class="content">Hyderabad</div>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+    </div>
+    <footer class="footerContainer"> &copy Copy Rights 2023</footer>
+</body>
+
+</html>

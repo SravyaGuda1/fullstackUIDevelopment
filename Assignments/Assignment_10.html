@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10_ empolyee salary calculation</title>
+</head>
+<body>
+    Employee salary calculation
+
+    <script>
+        var employeeName = prompt("Please mention employee name");
+        var employeeAge = prompt("Please mention employee aga");
+        var employeeGender = prompt("Enter employee gender");
+        var employeeDepartment = prompt("Please mention employee department");
+        var basicSalary = parseInt(prompt("Please enter employee basic salary"));
+        var totalSalary, PF, HRA, TAX;
+        PF = (14/100)*basicSalary;
+        HRA = (25/100)*basicSalary;
+        totalSalary = basicSalary+PF+HRA;
+        console.log("PF is "+PF);
+        console.log("HRA is "+HRA);
+        console.log("Total salary is "+totalSalary);
+
+        if (employeeGender === "Male") {
+            if (totalSalary > 100000) {
+                TAX = (15/100)*totalSalary;
+                console.log("Tax to be paid is "+TAX);
+            } else if(totalSalary > 50000){
+                TAX = (10/100)*totalSalary;
+                console.log("Tax to be paid is "+TAX);
+            } else if(totalSalary > 25000){
+                TAX = (5/100)*totalSalary;
+                console.log("Tax to be paid is "+TAX);
+            } else{
+                TAX = 0;
+                console.log("Tax to be paid is "+TAX);
+            }                     
+        } else {
+            if (totalSalary > 100000) {
+                TAX = (10/100)*totalSalary;
+                console.log("Tax to be paid is "+TAX);
+            } else if(totalSalary > 50000){
+                TAX = (5/100)*totalSalary;
+                console.log("Tax to be paid is "+TAX);
+            } else{
+                TAX = 0;
+                console.log("Tax to be paid is "+TAX);
+            }                     
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment7_CSS Positions</title>
+    <style>
+        body{
+            background: linear-gradient(135deg, rgb(239, 200, 125) 30%, cyan);
+            opacity: 0.8;
+        }
+        .header, .footer, .middleContainer{
+            border: 1px solid rgb(0, 0, 0);
+            padding: 10px;
+        }
+        .header, .footer{
+            text-align: center;
+            margin: 10px auto;
+            font-weight: 600;
+        }
+        .middleContainer{
+            position: relative;
+            height: 852px;
+            width: 98%;
+        }    
+        .footer{
+           position: relative;           
+        }    
+        .block{
+            height: 150px;
+            width: 150px;
+            border: 1px solid rgb(238, 225, 37);
+            margin: 5px;
+        } 
+        .block1{
+            background-color: rgb(155, 233, 233);
+            z-index: 2;
+            position: relative;
+        }
+        .block2{
+            background-color: blueviolet;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+        .block3{
+            background-color: blueviolet;
+            position: relative;
+            bottom: 75px;
+            left: 75px;
+            z-index: 1;
+        }
+        .block4{
+            background-color:rgb(230, 217, 169);
+            position: absolute;
+            right: 75px;
+            top: 75px;
+        }
+        .block5{
+            background-color: darkorange;
+            position: absolute;
+            left: 75px;
+            bottom: 75px;
+        }
+        .block6{
+            background-color: gold;
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+        }
+        .block7{
+            background-color: darksalmon;
+            position: absolute;
+            right: 75px;
+            bottom: 75px;
+        }
+        .block8{
+            background-color: firebrick;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+        .block9{
+            background-color: rgb(157, 229, 229);
+            position: absolute;
+            top: 45%;
+            bottom: 45%;
+            right: 45%;
+            left: 45%;
+        }
+        .b{
+            position: absolute;
+            top: 45%;
+            bottom: 45%;
+            left: 45%;
+            right: 45%;
+        }
+        .bi{
+            position: absolute;            
+            right: 5%;
+            color: aliceblue;            
+        }
+        .block10{
+            background-color:darksalmon;
+            position: absolute;
+            top: 35%;
+            bottom: 60%;
+            right: 55%;
+            left: 40%;
+        }
+        .block11{
+            background-color:darkkhaki;
+            position: absolute;
+            top: 35%;
+            bottom: 60%;
+            left: 50%;
+            right: 40%;
+        }
+        .block12{
+            background-color: rgb(71, 76, 157);
+            position: absolute;
+            top: 55%;
+            bottom: 35%;
+            right: 55%;
+            left: 40%;
+        }
+        .block13{
+            background-color: rgb(231, 43, 47);
+            position: absolute;
+            top: 55%;
+            bottom: 35%;
+            left: 50%;
+            right: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header"> Block Game</header>
+    <div class="middleContainer">
+        <div class="block1 block"><span class="b">b1</span></div>
+        <div class="block2 block"><span class="bi">b2</span></div>
+        <div class="block3 block"><span class="bi">b3</span></div>
+        <div class="block4 block"><span class="b">b4`</span></div>
+        <div class="block5 block"><span class="bi">b5</span></div>
+        <div class="block6 block"><span class="b">b6</span></div>
+        <div class="block7 block"><span class="bi">b7</span></div>
+        <div class="block8 block"><span class="b">b8</span></div>
+        <div class="block9 block"> <span class="b">b9</span> </div>
+        <div class="block10 block"><span class="b">b10</span></div>
+        <div class="block11 block"><span class="b">b11</span></div>
+        <div class="block12 block"><span class="b">b12</span></div>
+        <div class="block13 block"><span class="b">b13</span></div>
+    </div>
+    <footer class="footer">&copy Copy Rights 2023</footer>
+</body>
+</html>

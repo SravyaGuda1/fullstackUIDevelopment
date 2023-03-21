@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dhtml_validateField</title>
+    <style>
+        body{
+            margin: 2rem;
+            padding: 2rem;
+        }
+        h2{
+            text-align: center;
+        }
+        .inputField{
+            display: inline-block;
+        }
+        li{
+            list-style-type: none;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            display: flex;
+        }
+        p{
+            margin: 0px;
+        }
+        .submit{
+            height: 1.5rem;
+            width: 10rem;
+            background-color: orange;
+        }
+        .submit:hover{
+            cursor: pointer;
+        }
+        ul{
+            margin: 0px auto;
+            padding: 0px;
+            border: 1px solid black;
+            width: 40%;
+        }
+       label{
+        margin-right: 1rem;
+       }
+       .error{
+        color: red;
+        font-size: 0.9rem;
+       }
+        
+    </style>
+</head>
+<body>
+    <h2>Validate input field</h2>
+    <form method="POST" action="http://sravyaxyzabc.com/abc">
+        <ul>
+            <li>
+                <label for="accName">Account name </label>
+                <div class="inputField">
+                    <input type="text" name="accName" id="accName" onkeypress="return validateAccName(event)">
+                    <p class="error-AccName error"></p>
+                </div>
+            </li>
+            <li>
+                <label for="accNumber">Account number </label>
+                <div class="inputField">
+                    <input type="text" name="accNum" id="accNum" maxlength="10" onkeypress="return validateAccNum(event)">
+                    <p class="error-AccNum error"></p>
+                </div>
+            </li>
+            <li>
+                <label for="pwd" class="Accpwd">Account password </label>
+                <div class="inputField">
+                    <input type="password" name="pwd" id="pwd" maxlength="8" onchange="return validateTotalPwd()">
+                    <p class="error-AccPwd error"></p>
+                </div>
+            </li>
+            <li>
+                <label for="rePwd">Re enter Account password </label>
+                <div class="inputField">
+                    <input type="password" name="RePwd" id="RePwd" onchange="return validateRePwd()">
+                    <p class="error-RePwd error"></p>
+                </div>  
+            </li>
+            <li>
+                <input type="button" value="submit" class="submit" onclick="checkIfEmptyField()">
+            </li>        
+        </ul>
+    </form>
+    <script>
+        var validateAccName = (event) => {
+            console.log(event);
+            if((event.keyCode >=65 && event.keyCode <= 90) || (event.keyCode >=97 && event.keyCode <= 122))
+                return true;
+            else
+                document.querySelector("#accName").nextElementSibling.innerHTML="Only alphabets are allowed";
+                hideError("error-AccName");
+                return false;
+        }
+        var validateAccNum= (event) => {
+            console.log(event);
+            if((event.keyCode >=48 && event.keyCode <= 57))
+                return true;
+            else
+                document.querySelector("#accNum").nextElementSibling.innerHTML="Only numbers are allowed";
+                hideError("error-AccNum");
+                return false;
+        }
+        var validateTotalPwd = () => {
+            var pwdInput = document.querySelector("#pwd").value;
+            var inputString = pwdInput.toLowerCase();
+            // VALIDATE - Password should start with upper case Alphabet
+            console.log(pwdInput.match(/^[A-Z]/));
+            if(pwdInput.match(/^[A-Z]/))
+                return true;
+            else{
+                document.querySelector("#pwd").nextElementSibling.innerHTML="Password should start with upper case Alphabet";
+                hideError("error-AccPwd");
+            }          
+               
+            //validating for min 3 characters
+            // var  pwdInput.charAt(i).match(/[A-Za-z]/g);
+            count=0;
+            for(var i=0; i<inputString.length; i++){
+                if(inputString.charAt(i).match(/[A-Za-z]/g)){
+                    count++;
+                }
+                if(count < 3){
+                    document.querySelector("#pwd").nextElementSibling.innerHTML="Password should contain minimum 3 characters";
+                    hideError("error-AccPwd");                
+                } 
+            }          
+            //validate for - should contain 2 symbols
+            count = 0;
+            for(var i=0; i<inputString.length; i++){
+                if((inputString.charCodeAt(i) >= 33 && inputString.charCodeAt(i) <= 47) || (inputString.charCodeAt(i) >= 58 && inputString.charCodeAt(i) <= 64) || (inputString.charCodeAt(i) == 95))
+                    count++;
+                if(count<2){
+                    document.querySelector("#pwd").nextElementSibling.innerHTML="Password should contain minimum 2 symbols";
+                   hideError("error-AccPwd");  
+                }
+
+            }
+            //validating for min 1 number
+            count=0;
+            for(var i=0; i<inputString.length; i++){
+                if(inputString.charAt(i).match(/[0-9]/g)){
+                    count++;
+                }
+            }
+            if(count == 0){
+                    document.querySelector("#pwd").nextElementSibling.innerHTML="Password should contain minimum 1 number";
+                    hideError("error-AccPwd");                
+            } 
+            //validating for should not end with number
+            if(inputString.charAt(inputString.length-1) == "[0-9]"){
+                document.querySelector("#pwd").nextElementSibling.innerHTML="Password should not end with number";
+                hideError("error-AccPwd");
+            }    
+        }
+        var validateRePwd = () =>{
+            var RepwdInput = document.querySelector("#RePwd").value;
+            console.log(pwdInput);
+            console.log(RepwdInput);
+            if(RepwdInput != pwdInput){
+                document.querySelector("#RePwd").nextElementSibling.innerHTML="Should match with Password";
+                hideError("error-RePwd");
+            }
+        }
+        var hideError = (clsName) => {
+            setTimeout(function(){
+                var selector = "."+clsName;
+                document.querySelector(selector).innerHTML="";
+            } ,5000);
+        }
+
+
+        //remove error after element is giving input
+        var removeErrorOnFocus = () =>{
+            if(document.querySelector(".error").value != "" && (document.querySelector(".error").previousElementSibling === document.activeElement)){
+            document.querySelector(".error").previousElementSibling.addEventListener("keypress", function(){
+                document.querySelector(".error").innerHTML="";
+            })
+        }
+        }
+       
+        var emptyField = (id, fieldName, errorclsname) => {
+            var idSelector = "#"+id;
+            if(document.querySelector(id).value == ""){
+                document.querySelector(errorclassName).innerHTML = fieldName+" is required";
+                return false;
+            }
+        }
+        function checkIfEmptyField() {
+            var selectors = ["#accName", "#accNum", "#pwd", "#RePwd"];
+            for(var i=0; i< selectors.length; i++){
+                console.log(selectors[i]);
+                var inputElement = document.querySelector(selectors[i]);
+                if(inputElement.value == ""){
+                    inputElement.nextElementSibling.innerHTML = "This field is required";
+                    inputElement.addEventListener("keypress", function(){
+                        inputElement.nextElementSibling.innerHTML = "";
+                    });
+                    return false;
+            }
+            }
+            
+        }
+    </script>
+</body>
+</html>

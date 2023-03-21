@@ -1,0 +1,20 @@
+.basicOp-box{
+    width: 40%;   
+    margin: auto;
+}
+.InputElements{
+    list-style-type: none;
+    margin: none;
+    padding: 0px;
+}
+.InputElements > li, .operation-drpdown, .performOperation{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+h1{
+    text-align: center;
+}
+
+.performOperation{
+    cursor: pointer;
+}
