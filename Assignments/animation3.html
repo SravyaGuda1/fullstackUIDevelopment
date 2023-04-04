@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 3</title>
+    <style>
+        .Container{
+            width: 80%;
+            height: 50rem;
+            border: 3px solid red;
+            margin: 5rem auto;
+            position: relative;
+        }
+        .ball{
+            width: 10rem;
+            height: 10rem;
+            background-image:  radial-gradient(red, yellow, pink);
+            border-radius: 50%;
+            box-shadow: 1px 1px 10px goldenrod;
+            animation: ballSlide 10s infinite;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+        }
+        @keyframes ballSlide {
+            25%{
+                /* transform: scale(0.5); */
+                background-image:  conic-gradient(rgb(13, 0, 255), rgb(0, 162, 255), rgb(219, 255, 192));
+                left: 1rem;
+                top: 39rem;
+            }
+            50%{
+                /* transform: scale(0.5); */
+                background-image:  radial-gradient(rgb(51, 255, 0), rgb(246, 255, 0), rgb(255, 216, 192));
+                left: 88%;
+                top: 39rem;
+            }
+            75%{
+                /* transform: scale(0.5); */
+                background-image:  linear-gradient(rgb(246, 255, 0), rgb(241, 40, 90), rgb(110, 233, 151));
+                left: 88%;
+                top: 1rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>

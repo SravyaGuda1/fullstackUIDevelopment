@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        .clock-container{
+            width: 55rem;
+            height: 55rem;
+            border: 5rem double black;
+            margin: 20px auto;
+            border-radius: 50%;
+            position: relative;
+        }
+        .centerpt{
+            position: absolute;
+            top: 48%;
+            left: 48%;
+            z-index: 0;
+        }
+        .secPtBlk, .minPtBlk, .hrPtBlk{
+            width: 5px;
+            height: 100%;
+            position: absolute;
+            top: 2%; 
+            /* left: 49%; */
+        }
+        .secPtBlk> .secpt{
+            width: 0.5rem;
+            height: 50%;
+            position: relative;
+        }
+        .minPtBlk> .secpt{
+            width: 0.5rem;
+            height: 50%;
+            position: absolute;
+            top: 3rem;
+                }
+        .hrPtBlk> .secpt{
+            width: 0.5rem;
+            height: 50%;
+            position: relative;
+        }
+        .secImg, .minImg, .hrImg{
+            transform: scaleY(2); 
+        }
+        .minImg{
+             position: absolute;
+             bottom: 7rem;
+            z-index: 2;
+        }
+        .secImg{
+            position: absolute;
+            bottom: 6rem;
+            z-index: 3;
+        }
+        .hrImg{
+            z-index: 1;
+            position: absolute;
+            bottom: 3.5rem;
+            left: -1rem;
+            opacity: 0.5;
+        }
+        ol{
+            margin: none;
+        }
+        li{
+            list-style-type: none;
+        }
+        .num{
+            font-size:5rem;
+            font-weight: 900;
+            position: absolute;
+        }
+        .num1{
+            top: -22rem;
+            right: -12rem;
+        }
+        .num2{
+            right: -20rem;
+            top: -14rem;
+        }
+        .num3{
+        top: -2rem;
+        right: -24rem;
+        }
+        .num4{
+            right: -20rem;
+            bottom: -14rem;
+        }
+        .num5{
+            bottom: -22rem;
+            right: -12rem;
+        }
+        .num6{
+            bottom: -25rem;
+            left: -1rem;
+        }
+        .num7{
+            bottom: -21rem;
+            left: -14rem;
+        }
+        .num8{
+            left: -22rem;
+            bottom: -12rem;
+        }
+        .num9{
+            top: -2rem;
+            left: -25rem;
+        }
+        .num10{
+            left: -22rem;
+            top: -15rem;
+        }
+        .num11{
+            top: -22rem;
+            left: -13rem;
+        }
+        .num12{
+            top: -26rem;
+            left: -1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Show clock</h1>
+    <div class="clock-container">
+        <span class="centerpt"><img src="center.png" alt=""></spam>
+        <div class="secPtBlk">
+            <div class="secpt"><img class="secImg" src="secondshand.png" alt=""></div>
+        </div>
+        <div class="minPtBlk">
+            <div class="secpt"><img class="minImg" src="minhand.png" alt=""></div>
+        </div>
+        <div class="hrPtBlk">
+            <div class="secpt"><img class="hrImg" src="hrhand.png" alt=""></div>
+        </div>
+        <ol>
+            <li class="num1 num">1</li>
+            <li class="num2 num">2</li>
+            <li class="num3 num">3</li>
+            <li class="num4 num">4</li>
+            <li class="num5 num">5</li>
+            <li class="num6 num">6</li>
+            <li class="num7 num">7</li>
+            <li class="num8 num">8</li>
+            <li class="num9 num">9</li>
+            <li class="num10 num">10</li>
+            <li class="num11 num">11</li>
+            <li class="num12 num">12</li>
+        </ol>
+
+    </div>
+
+    <script>
+        var date = new Date();
+        var secangle = (date.getSeconds())*6;
+        var minangle = (date.getMinutes())*6;
+        var getHrAngle = function(){
+            console.log(date);
+            if(date.getHours >= 12)
+                return (date.getHours()-12)*30;
+            else
+                return date.getHours()*30;
+        }
+        var hrangle = getHrAngle();
+    //    var hrangle = 0;
+       
+        var rotateSecpt = () =>{ 
+            document.querySelector(".secPtBlk").style.transform = 'rotate('+secangle+'deg)';
+            if(secangle==360){
+                rotateMinpt();
+                secangle = 0;
+            }else{
+                secangle+=6;
+            }
+        }
+        var rotateMinpt = () =>{ 
+            document.querySelector(".minPtBlk").style.transform = 'rotate('+minangle+'deg)';
+            if(minangle==360){
+                rotatehrpt();
+                minangle = 0;
+            }else{
+                minangle+=6;
+            }
+        }
+        var rotatehrpt = () =>{ 
+            document.querySelector(".hrPtBlk").style.transform = 'rotate('+hrangle+'deg)';
+            if(hrangle==360){
+                hrangle = 0;
+            }else{
+                hrangle+=30;
+            }
+        }
+        rotateSecpt();
+        rotateMinpt();
+        rotatehrpt();
+        setInterval(rotateSecpt, 1000);
+    </script>
+</body>
+</html>
